@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main() {
-    setlocale(LC_ALL, "pt_BR.UTF-8");
     
     char estado1, estado2, codigo1[4], codigo2[4], cidade1[50], cidade2[50];
     int populacao1, populacao2, turismo1, turismo2;
@@ -14,8 +12,8 @@ int main() {
     scanf(" %c", &estado1);
     printf("Código da Carta (a letra do estado seguida de um número de 01 a 04 - ex: A01, B03): ");
     scanf(" %3s", codigo1);
-    printf("Nome da Cidade: ");
-    scanf(" %[^\n]", cidade1);
+    printf("Nome da Cidade (escreva tudo junto): ");
+    scanf(" %49s", cidade1);
     printf("População (número de habitantes da cidade): ");
     scanf("%d", &populacao1);
     printf("Área (em km²): ");
@@ -33,7 +31,7 @@ int main() {
     printf("Código da Carta (a letra do estado seguida de um número de 01 a 04 - ex: A01, B03): ");
     scanf(" %3s", codigo2);
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", cidade2);
+    scanf(" %49s", cidade2);
     printf("População (número de habitantes da cidade): ");
     scanf("%d", &populacao2);
     printf("Área (em km²): ");
